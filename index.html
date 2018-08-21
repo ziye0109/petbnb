@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        .menu {
+
+            background: pink;
+            padding: 20px;
+        }
+
+        .search_bar {
+
+            background: lightgray;
+            padding: 20px;
+
+
+        }
+
+        .post {
+
+            display: flex;
+            padding: 20px;
+            
+
+
+        }
+    </style>
+
+    <script>
+
+        const POST_URL = 'https://bhp7gn0sub.execute-api.us-east-2.amazonaws.com/dev/posts';
+        fetch(POST_URL)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+        })
+
+    </script>
+
+
+    <title>Petbnb</title>
+</head>
+
+<body>
+
+    <div class='menu'>
+        Menu
+    </div>
+
+    <div class="search_bar">
+        Search Bar
+    </div>
+
+    <div class='post'>
+        Post View
+    </div>
+
+</body>
+
+</html>
